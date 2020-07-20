@@ -1,6 +1,11 @@
 const fs = require('fs');
 
-fs.stat('./text.txt', (err, stats) => {
-    if (err) throw err;
-    console.log(`stats: ${JSON.stringify(stats)}`);
-});
+
+function fileStat(params) {
+    fs.stat('./text.txt', (err, stats) => {
+        if (err) throw err;l
+        console.log(`stats: ${JSON.stringify(stats)}`);
+    });    
+}
+
+fileStat();
